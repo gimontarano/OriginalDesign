@@ -7,9 +7,10 @@ void setup()
 }
 void draw()
 {
-	if (mousePressed = true || crack > 9)
+	if (mousePressed = false) //&& crack > 9)
 	{
 		platypus();
+		System.out.println(Math.random());
 	}
 	background(127);
  	egg();
@@ -54,7 +55,7 @@ void egg()
 }
 void platypus()
 {
-	background(127);
+	background(0);
 	fill(51, 255, 153);
 	rect(150, 200, 100, 50, 30);
 }
