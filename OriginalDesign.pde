@@ -3,15 +3,11 @@ int crack = 0;
 void setup()
 {
  	size(400,400);
- 	frameRate(1);
+ 	//frameRate(1);
+ 	noLoop();
 }
 void draw()
 {
-	if (mousePressed = false) //&& crack > 9)
-	{
-		platypus();
-		System.out.println(Math.random());
-	}
 	background(127);
  	egg();
  	crack = crack + 1;
@@ -21,6 +17,8 @@ void egg()
 {
 	fill(240, 240, 230);
 	ellipse(200, 200, 200, 280);
+	textAlign(CENTER);
+	text("Click the egg to make it hatch.", 200, 50);
 	if (crack > 0) {
 		line(300, 200, 280, 220);
 	}
@@ -50,14 +48,36 @@ void egg()
 	}
 	if (crack > 9){
 		line(120, 220, 100, 200);
-		//text("click the egg to see what's inside")
+		text("One last click to see what's inside...", 200, 350);
+	}
+	if (crack > 10){
+		background(127);
+		platypus();
 	}
 }
 void platypus()
 {
-	background(0);
+	noStroke();
+	//tail
+	fill(255, 128, 0);
+	rect(225, 215, 60, 25, 30);
+	//body
 	fill(51, 255, 153);
 	rect(150, 200, 100, 50, 30);
+	//beak
+	fill(255, 128, 0);
+	rect(125, 215, 40, 25, 50);
+	//legs
+	fill(51, 255, 153);
+	//rect()
+
+	textAlign(CENTER);
+	text("Congratulations! You hatched a minimalist platypus!", 200, 350);
+
+}
+void mousePressed()
+{
+	redraw();
 }
 
 
