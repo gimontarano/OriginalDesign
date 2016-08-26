@@ -58,6 +58,12 @@ void egg()
 void platypus()
 {
 	noStroke();
+	//legs
+	fill(51, 255, 153);
+	rect(220, 240, 15, 20, 10);
+	rect(205, 240, 15, 20, 10);
+	rect(160, 240, 15, 20, 10);
+	rect(175, 240, 15, 20, 10);
 	//tail
 	fill(255, 128, 0);
 	rect(225, 215, 60, 25, 30);
@@ -67,9 +73,10 @@ void platypus()
 	//beak
 	fill(255, 128, 0);
 	rect(125, 215, 40, 25, 50);
-	//legs
-	fill(51, 255, 153);
-	//rect()
+	//eyes
+	fill(0);
+	ellipse(170, 220, 10, 10);
+	
 
 	textAlign(CENTER);
 	text("Congratulations! You hatched a minimalist platypus!", 200, 350);
